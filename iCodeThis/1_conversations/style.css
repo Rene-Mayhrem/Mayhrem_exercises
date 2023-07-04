@@ -1,0 +1,14 @@
+* {
+    background-color: black;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.chat-container, contacts-container {
+    flex: 1;
+    padding: 20px;
+    border: 1px solid whitesmoke;
+}
