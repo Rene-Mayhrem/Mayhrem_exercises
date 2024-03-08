@@ -8,6 +8,10 @@ However, Beetleman has limited space in his hero bag.
 
 Your task is to help Beetleman choose gadgets to increase his fighting power as much as possible.
 
+## Details
+
+Level: Easy
+
 ## Standard Input
 
 The first line of input has one integer (1≤t≤25), the number of test cases that will follow.
