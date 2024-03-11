@@ -26,14 +26,14 @@ public class App {
 
     // ? variable for query -> number of queries iterations
     int q = sc.nextInt();
-    int a = sc.nextInt(); //? variable for calculation -> a
-    int b = sc.nextInt(); //? variable for calculation -> b
-    int n = sc.nextInt(); //? variable for calculation -> n (iteration)
 
     for (int i = 0; i < q; i++) {
+      int a = sc.nextInt(); //? variable for calculation -> a
+      int b = sc.nextInt(); //? variable for calculation -> b
+      int n = sc.nextInt(); //? variable for calculation -> n (iteration)
       int remain = 0;
       for (int j = 0; j < n; j++) {
-        remain += remain + (a + Math.pow(2, j) * b);
+        remain += (a + Math.pow(2, j) * b);
         System.out.print(remain+" ");
       }
       System.out.println();
