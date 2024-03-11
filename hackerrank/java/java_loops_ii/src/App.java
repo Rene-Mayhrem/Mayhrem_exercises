@@ -23,5 +23,21 @@ public class App {
   public static void main(String[] args) throws Exception {
 
     Scanner sc = new Scanner(System.in);
+
+    // ? variable for query -> number of queries iterations
+    int q = sc.nextInt();
+    int a = sc.nextInt(); //? variable for calculation -> a
+    int b = sc.nextInt(); //? variable for calculation -> b
+    int n = sc.nextInt(); //? variable for calculation -> n (iteration)
+
+    for (int i = 0; i < q; i++) {
+      int remain = 0;
+      for (int j = 0; j < n; j++) {
+        remain += remain + (a + Math.pow(2, j) * b);
+        System.out.print(remain+" ");
+      }
+      System.out.println();
+    }
+
   }
 }
