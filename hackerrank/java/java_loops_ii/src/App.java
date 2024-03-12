@@ -31,9 +31,9 @@ public class App {
       int a = sc.nextInt(); //? variable for calculation -> a
       int b = sc.nextInt(); //? variable for calculation -> b
       int n = sc.nextInt(); //? variable for calculation -> n (iteration)
-      int remain = 0;
+      int remain = a;
       for (int j = 0; j < n; j++) {
-        remain += (a + Math.pow(2, j) * b);
+        remain += (Math.pow(2, j) * b);
         System.out.print(remain+" ");
       }
       System.out.println();
