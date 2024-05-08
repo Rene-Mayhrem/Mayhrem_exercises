@@ -17,10 +17,9 @@ public class App {
                     if (matrix[i][j] > 0) {
                         int aux = 0;
                         // ! Checking if the element above is not zero 
-                        for (int k = 0; k < i - 1; k++) {
+                        for (int k = 0; k < i; k++) {
                             if (matrix[k][j] == 0) {
                                 aux = 1;
-                                break;
                             }
                         }
                         if (aux == 0) {
