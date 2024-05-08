@@ -15,8 +15,15 @@ public class App {
                 }else {
                     // ! Checking if the element is different than zero
                     if (matrix[i][j] > 0) {
+                        int aux = 0;
                         // ! Checking if the element above is not zero 
-                        if (matrix[i - 1][j] > 0) {
+                        for (int k = 0; k < i - 1; k++) {
+                            if (matrix[k][j] == 0) {
+                                aux = 1;
+                                break;
+                            }
+                        }
+                        if (aux == 0) {
                             total += matrix[i][j];
                         }
                     }
