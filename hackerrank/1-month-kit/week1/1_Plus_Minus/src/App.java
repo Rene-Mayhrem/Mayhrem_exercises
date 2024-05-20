@@ -6,7 +6,7 @@ public class App {
 
 
     public static void plusMinus (List<Integer> arr) {
-        int positive = 0, negative = 0, zeros = 0;
+        double positive = 0, negative = 0, zeros = 0;
 
         for(int number: arr) {
             if(number > 0) {
@@ -17,9 +17,9 @@ public class App {
                 zeros++;
             }
         }
-        System.out.println(String.format("%.6f", positive));
-        System.out.println(String.format("%.6f", negative));
-        System.out.println(String.format("%.6f", zeros));
+        System.out.println(String.format("%.6f", positive/arr.size()));
+        System.out.println(String.format("%.6f", negative/arr.size()));
+        System.out.println(String.format("%.6f", zeros/arr.size()));
     }
 
     
