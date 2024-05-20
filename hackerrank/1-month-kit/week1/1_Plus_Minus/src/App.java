@@ -6,8 +6,9 @@ public class App {
 
 
     public static void plusMinus (List<Integer> arr) {
+        // ? auxiliar variables 
         double positive = 0, negative = 0, zeros = 0;
-
+        // ? initial conditions; determine which type of value is stored as a number
         for(int number: arr) {
             if(number > 0) {
                 positive++;
@@ -17,6 +18,7 @@ public class App {
                 zeros++;
             }
         }
+        // ? Printing final results
         System.out.println(String.format("%.6f", positive/arr.size()));
         System.out.println(String.format("%.6f", negative/arr.size()));
         System.out.println(String.format("%.6f", zeros/arr.size()));
