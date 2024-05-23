@@ -18,4 +18,8 @@ Repository for adding solutions from different sites where you can find programm
 * [codewars > Java, Javascript, python](https://www.codewars.com/dashboard)
 * [csacademy > Java, Javascript, python](https://csacademy.com/contest/interview-archive/)
 
+### INSTRUCTIONS:
+It's important to define that if you lack of options for improving programming courses, you should go to freecodecamp to learn another stuff. But if you lack of options for adding commits into github; try to define a new goal for at least one commit per day
+
+
   
