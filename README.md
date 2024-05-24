@@ -17,5 +17,15 @@ Repository for adding solutions from different sites where you can find programm
 * [Freecodecamp > Javascript, HTML, CSS](https://www.freecodecamp.org/learn/?messages=success%5B0%5D%3Dflash.signin-success)
 * [codewars > Java, Javascript, python](https://www.codewars.com/dashboard)
 * [csacademy > Java, Javascript, python](https://csacademy.com/contest/interview-archive/)
+* [react learning](https://cursoreact.dev/)
+* [Helsinki university](https://www.helsinki.fi/en/admissions-and-education/open-university/multidisciplinary-themed-modules/full-stack)
+
+
+### INSTRUCTIONS:
+It's important to define that if you lack of options for improving programming courses, you should go to freecodecamp to learn another stuff. But if you lack of options for adding commits into github; try to define a new goal for at least one commit per day, 
+The main goal is to build a interesting habit looking for creating commits for my developing and increasing myself c:
+
+
+
 
   
