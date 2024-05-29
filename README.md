@@ -19,6 +19,8 @@ Repository for adding solutions from different sites where you can find programm
 * [csacademy > Java, Javascript, python](https://csacademy.com/contest/interview-archive/)
 * [react learning](https://cursoreact.dev/)
 * [Helsinki university](https://www.helsinki.fi/en/admissions-and-education/open-university/multidisciplinary-themed-modules/full-stack)
+* [regex expressions](https://regex-vis.com/)
+* [Helskin fullstack open](https://fullstackopen.com/en/)
 
 
 ### INSTRUCTIONS:
