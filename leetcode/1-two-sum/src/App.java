@@ -20,7 +20,17 @@ public class App {
 
     public static void main(String[] args) throws Exception {
         // ? Create an array
-        int[] myArray = {};
-         
+    }
+}
+
+class Solution {
+    public int[] twoSum(int[] nums, int target) {
+        //? auxiliar variables 
+        int sum = 0;
+        int[] index_targets;
+        for(int i = 0; i < nums.length; i++) {
+            
+        }
+        return null;
     }
 }
