@@ -30,20 +30,15 @@ public class App {
 
 class Solution {
     public int[] twoSum(int[] nums, int target) {
-        //? auxiliar variables 
-        int[] index_targets =  new int[2];
         for(int i = 0; i < nums.length; i++) {
             for(int j = 0; j < nums.length; j++) {
                 if(i != j) {
-                    int sum = nums[i] + nums[j];
-                    if(target == sum) {
-                        index_targets[0] = i;
-                        index_targets[1] = j;
-                        return index_targets;
+                    if((nums[i] + nums[j]) == target) {
+                        return new int[] {i, j};
                     }
                 }
             }
         }
-        return index_targets;
+        return new int[]{}; 
     }
 }
