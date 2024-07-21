@@ -19,18 +19,31 @@ public class App {
 
 
     public static void main(String[] args) throws Exception {
-        // ? Create an array
+        Solution solution = new Solution();
+        int[] nums = {3, 2, 4};
+        int[] targets = solution.twoSum(nums, 6);
+        for(int target: targets) {
+            System.out.println("Target: "+target);
+        }
     }
 }
 
 class Solution {
     public int[] twoSum(int[] nums, int target) {
         //? auxiliar variables 
-        int sum = 0;
-        int[] index_targets;
+        int[] index_targets =  new int[2];
         for(int i = 0; i < nums.length; i++) {
-        
+            for(int j = 0; j < nums.length; j++) {
+                if(i != j) {
+                    int sum = nums[i] + nums[j];
+                    if(target == sum) {
+                        index_targets[0] = i;
+                        index_targets[1] = j;
+                        return index_targets;
+                    }
+                }
+            }
         }
-        return null;
+        return index_targets;
     }
 }
