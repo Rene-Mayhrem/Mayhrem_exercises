@@ -1,18 +1,38 @@
-## Getting Started
+# 13, Roman to Integer
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Roman numerals are represented by seven different symbols: I, V, X, L, C, D and M.
 
-## Folder Structure
+Symbol       Value
+I             1
+V             5
+X             10
+L             50
+C             100
+D             500
+M             1000
+For example, 2 is written as II in Roman numeral, just two ones added together. 12 is written as XII, which is simply X + II. The number 27 is written as XXVII, which is XX + V + II.
 
-The workspace contains two folders by default, where:
+Roman numerals are usually written largest to smallest from left to right. However, the numeral for four is not IIII. Instead, the number four is written as IV. Because the one is before the five we subtract it making four. The same principle applies to the number nine, which is written as IX. There are six instances where subtraction is used:
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+I can be placed before V (5) and X (10) to make 4 and 9. 
+X can be placed before L (50) and C (100) to make 40 and 90. 
+C can be placed before D (500) and M (1000) to make 400 and 900.
+Given a roman numeral, convert it to an integer.
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+*Example 1:*
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+Input: s = "III"
+Output: 3
+Explanation: III = 3.
 
-## Dependency Management
+*Example 2:*
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+Input: s = "LVIII"
+Output: 58
+Explanation: L = 50, V= 5, III = 3.
+
+*Example 3:*
+
+Input: s = "MCMXCIV"
+Output: 1994
+Explanation: M = 1000, CM = 900, XC = 90 and IV = 4.
