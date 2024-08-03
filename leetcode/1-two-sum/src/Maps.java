@@ -19,7 +19,7 @@ public class Maps {
 class Solution {
   public int[] twoSum (int[] numbers, int target) {
     System.out.println("Hello");
-    HashMap<Integer, Integer> numbersMap = new HashMap<>();
+    HashMap<Integer, Integer> numbersMap = new HashMap<>(); 
     for (int i = 0; i < numbers.length; i++) {
       numbersMap.put(i, numbers[i]);
       System.out.println("Print");
