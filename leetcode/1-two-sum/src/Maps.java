@@ -1,4 +1,5 @@
 import java.util.HashMap;
+import java.util.Map;
 
 public class Maps {
   
@@ -20,30 +21,25 @@ class MapSolution {
 
   private HashMap<Integer, Integer> arrayToHashMap (int[] numbers) {
     HashMap<Integer, Integer> numbersMap = new HashMap<>();
-    // ? Creating the hash map, where the key is thwe index and the value is the element in the selected index.
+    // ? Creating the hash map
+    // ! where the key is the value 
+    // ! where the value is the index
     for (int i = 0; i < numbers.length; i++) {
-      numbersMap.put(i, numbers[i]);
+      numbersMap.put(numbers[i], i);
     }
     return numbersMap;
   }
 
   public int[] twoSum (int[] numbers, int target) {
     HashMap<Integer, Integer> numbersMap = this.arrayToHashMap(numbers);
-    int[] values = new int[2];
-    System.out.println(numbersMap);
-    numbersMap.forEach((key, value) -> {
-      if(value <= target) {
-        Integer aux = Math.abs(target - value);
-        if (numbersMap.containsValue(aux)) {
-          values[0] = key;
-          values[1] = numbersMap.getOrDefault(key, aux);
-        }
+    for (int i = 0; i < numbers.length; i++) {
+      int auxComplement = target - numbers[i];
+      if (numbersMap.containsKey(auxComplement) && numbersMap.get(auxComplement) != i) {
+        return new int[]{i, numbersMap.get(auxComplement)};
+        
       }
-
-    });
-
-    
-    return values;
+    }
+    return new int[]{};
   }
 
 }
