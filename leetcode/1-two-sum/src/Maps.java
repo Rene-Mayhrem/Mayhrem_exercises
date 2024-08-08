@@ -1,4 +1,5 @@
 import java.util.HashMap;
+import java.util.Map;
 
 public class Maps {
   
@@ -8,25 +9,37 @@ public class Maps {
     MapSolution solution = new MapSolution();
 
     int[] numbers = {2, 7, 11, 15};
-
-    System.out.println("Test");
-
-    solution.twoSum(numbers, 9);
-
-    System.out.println("What's going in here?");
+    int[] values = solution.twoSum(numbers, 9);
+    for(int value : values) {
+      System.out.println(value);
+    }
     
   }
 }
 
 class MapSolution {
-  public int[] twoSum (int[] numbers, int target) {
-    System.out.println("Hello");
-    HashMap<Integer, Integer> numbersMap = new HashMap<>(); 
+
+  private HashMap<Integer, Integer> arrayToHashMap (int[] numbers) {
+    HashMap<Integer, Integer> numbersMap = new HashMap<>();
+    // ? Creating the hash map
+    // ! where the key is the value 
+    // ! where the value is the index
     for (int i = 0; i < numbers.length; i++) {
-      numbersMap.put(i, numbers[i]);
-      System.out.println("Print");
+      numbersMap.put(numbers[i], i);
     }
-    System.out.println(numbersMap);
-    return null;
+    return numbersMap;
   }
+
+  public int[] twoSum (int[] numbers, int target) {
+    HashMap<Integer, Integer> numbersMap = this.arrayToHashMap(numbers);
+    for (int i = 0; i < numbers.length; i++) {
+      int auxComplement = target - numbers[i];
+      if (numbersMap.containsKey(auxComplement) && numbersMap.get(auxComplement) != i) {
+        return new int[]{i, numbersMap.get(auxComplement)};
+        
+      }
+    }
+    return new int[]{};
+  }
+
 }

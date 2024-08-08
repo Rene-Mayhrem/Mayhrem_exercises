@@ -1,18 +1,35 @@
-## Getting Started
+  # 1460. Make Two Arrays Equal by Reversing Subarrays
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+  You are given two integer arrays of equal length target and arr. In one step, you can select any non-empty subarray of arr and reverse it. You are allowed to make any number of steps.
 
-## Folder Structure
+Return true if you can make arr equal to target or false otherwise.
 
-The workspace contains two folders by default, where:
+ 
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+*Example 1:*
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+Input: target = [1,2,3,4], arr = [2,4,1,3]
+Output: true
+Explanation: You can follow the next steps to convert arr to target:
+1- Reverse subarray [2,4,1], arr becomes [1,4,2,3]
+2- Reverse subarray [4,2], arr becomes [1,2,4,3]
+3- Reverse subarray [4,3], arr becomes [1,2,3,4]
+There are multiple ways to convert arr to target, this is not the only way to do so.
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+*Example 2:*
+Input: target = [7], arr = [7]
+Output: true
+Explanation: arr is equal to target without any reverses.
 
-## Dependency Management
+*Example 3:*
+Input: target = [3,7,9], arr = [3,7,11]
+Output: false
+Explanation: arr does not have value 9 and it can never be converted to target.
+ 
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+Constraints:
+
+target.length == arr.length
+1 <= target.length <= 1000
+1 <= target[i] <= 1000
+1 <= arr[i] <= 1000
