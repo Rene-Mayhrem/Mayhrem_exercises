@@ -5,18 +5,20 @@ public class Maps {
   
   public static void main(String[] args) {
 
-    Solution solution = new Solution();
+    MapSolution solution = new MapSolution();
 
     int[] numbers = {2, 7, 11, 15};
 
     System.out.println("Test");
 
     solution.twoSum(numbers, 9);
+
+    System.out.println("What's going in here?");
     
   }
 }
 
-class Solution {
+class MapSolution {
   public int[] twoSum (int[] numbers, int target) {
     System.out.println("Hello");
     HashMap<Integer, Integer> numbersMap = new HashMap<>(); 
