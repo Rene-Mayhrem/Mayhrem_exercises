@@ -3,9 +3,8 @@ import java.util.HashMap;
 
 public class App {
     public static void main(String[] args) throws Exception {
-        System.out.println("Hello, World!");
         Solution sol = new Solution();
-        sol.findPermutationDifference("abc", "bca");
+        System.out.println(sol.findPermutationDifference("abc", "bac"));
     }
 }
 
@@ -22,12 +21,12 @@ class Solution {
     }
 
     public int findPermutationDifference (String s, String t) {
-        ArrayList<HashMap<String, Integer>> strings = new ArrayList<>();
-        strings.add(stringToMap(s));
-        strings.add(stringToMap(t));
-        for (HashMap<String, Integer> string : strings) {
-            System.out.println(string);
+        HashMap<String, Integer> mapS = stringToMap(s);
+        HashMap<String, Integer> mapT = stringToMap(t);
+        int permutationDifference = 0;
+        for (char character : s.toCharArray()) {
+            permutationDifference += Math.abs(mapS.get(String.valueOf(character)) - mapT.get(String.valueOf(character)));
         }
-        return 0;
+        return permutationDifference;
     }
 }
