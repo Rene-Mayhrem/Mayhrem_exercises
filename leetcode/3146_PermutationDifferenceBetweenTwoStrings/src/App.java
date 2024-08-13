@@ -38,4 +38,12 @@ class Solution {
         }
         return permutationDifference;
     }
+
+    public int findPermutationDifferenceWithoutHash (String s, String t) {
+        int permutationDifference = 0;
+        for (int i = 0; i < s.length(); i++) {
+            permutationDifference += Math.abs(t.indexOf(s.charAt(i)) - i);
+        }
+        return permutationDifference;
+    }
 }
