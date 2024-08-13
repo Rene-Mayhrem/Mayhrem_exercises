@@ -3,3 +3,11 @@ public class App {
         System.out.println("Hello, World!");
     }
 }
+
+class Solution {
+    public int[] productExceptSelf (int[] nums) {
+        int[] left = new int[nums.length];
+        int[] right = new int[nums.length];
+        return null;
+    }
+}
