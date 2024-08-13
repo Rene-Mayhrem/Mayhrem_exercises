@@ -1,9 +1,12 @@
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class App {
     public static void main(String[] args) throws Exception {
-        List<Integer> grades = new ArrayList<>();
+        List<Integer> grades = new ArrayList<>(Arrays.asList(4, 73, 67, 38, 33));
+        Solution solution = new Solution();
+        System.out.println(solution.gradingStudents(grades));
     }
 }
 
