@@ -12,7 +12,6 @@ public class App {
 class Solution {
     public LinkedList addTwoNumbers (LinkedList l1, LinkedList l2) {
         //? reverse my lists
-        l1.RE
         return null;
     }
 }
