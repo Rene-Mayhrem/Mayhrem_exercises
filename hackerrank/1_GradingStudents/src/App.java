@@ -12,14 +12,14 @@ public class App {
 
 class Solution {
     public static List<Integer> gradingStudents (List<Integer> grades) {
-        for (int grade : grades) {
-            if (grade >= 40) {
-                int nextMultiple = grade;
+        for (int i = 0; i < grades.size(); i++) {
+            if (grades.get(i) >= 38) {
+                int nextMultiple = grades.get(i);
                 while (nextMultiple % 5 != 0) {
                     nextMultiple++;
                 }
-                if ((nextMultiple - grade) < 3) {
-                    grade = nextMultiple;
+                if ((nextMultiple - grades.get(i)) < 3) {
+                    grades.set(i, nextMultiple);
                 }
             }
         }
