@@ -1,5 +1,4 @@
 import java.util.Arrays;
-import java.util.LinkedList;
 
 public class App {
     public static void main(String[] args) throws Exception {
@@ -13,5 +12,16 @@ class Solution {
     public LinkedList addTwoNumbers (LinkedList l1, LinkedList l2) {
         //? reverse my lists
         return null;
+    }
+}
+
+class LinkedList {
+    private Node head;
+    private Node tail;
+    private length;
+
+    class Node {
+        int value;
+
     }
 }
