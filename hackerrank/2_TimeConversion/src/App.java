@@ -2,21 +2,18 @@ public class App {
     public static void main(String[] args) throws Exception {
         // System.out.println("Hello, World!");
         Solution sol = new Solution();
-        sol.timeConversion("12:00:01PM");
+        System.out.println(sol.timeConversion("12:45:45PM"));
     }
 }
 
 class Solution {
     public String timeConversion (String time) {
-        String convertedTime = "";
+        String convertedTime = time.substring(2, time.length() - 2);
         String timeStatus = time.substring(time.length() - 2);
-        String[] timeStamp = time.substring(0, time.length() - 2).split(":");
-        // for(String currentTime : timeStamp) {
-        //     System.out.println(currentTime);
-        // }
+        String hourStamp = time.substring(0, 2);
         if (timeStatus.equals("PM")) {
             String hour = "";
-            switch (timeStamp[0]) {
+            switch (hourStamp) {
                 case "01":
                     hour = "13";
                     break;
@@ -50,12 +47,14 @@ class Solution {
                 case "11":
                     hour = "23";
                     break;
-                case "12":
-                    hour = "00";
-                    break;
+                default:
+                    return hourStamp + convertedTime;
             }
+            return convertedTime = hour + convertedTime;
+        } 
+        if (hourStamp.equals("12")) {
+            return "00" + convertedTime;
         }
-        System.out.println(timeStatus);
-        return null;
+        return hourStamp + convertedTime;
     }
 }
