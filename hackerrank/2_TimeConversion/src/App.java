@@ -7,7 +7,22 @@ public class App {
 }
 
 class Solution {
-    public String timeConversion (String time) {
+    public String timeConversion(String time) {
+        // HH:MM:SSPM
+        // IF 12 - PM - KEEPS THE SAME
+        // IF 01 PM TO 11 PM -> CHANGE FORMAT
+        // IF 01 AM TO 11 AM -> KEEPS THE SAME
+        // IF 12 AM - CHANGE TO 00
+
+        //? HH:MM:SS IF NEEDED TO KEEP THE SAME
+        //? :MM:SS IF HOUR CHANGES
+        //? AM TO DECIDE
+        String timePeriod = time.substring(time.length() - 2);
+        String staticTime = time.substring(2, time.length() - 2);
+
+        
+
+
         String convertedTime = time.substring(2, time.length() - 2);
         String timeStatus = time.substring(time.length() - 2);
         String hourStamp = time.substring(0, 2);
@@ -51,7 +66,7 @@ class Solution {
                     return hourStamp + convertedTime;
             }
             return convertedTime = hour + convertedTime;
-        } 
+        }
         if (hourStamp.equals("12")) {
             return "00" + convertedTime;
         }
