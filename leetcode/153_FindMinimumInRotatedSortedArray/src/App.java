@@ -1,11 +1,13 @@
 public class App {
     public static void main(String[] args) throws Exception {
         System.out.println("Hello, World!");
+        
     }
 }
 
 class Solution {
     public int findMin (int[] nums) {
+        //? left and right for index
         int left = 0;
         int right = nums.length - 1;
         int ans = nums[0];
