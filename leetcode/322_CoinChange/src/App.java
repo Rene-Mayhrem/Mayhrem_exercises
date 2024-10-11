@@ -41,7 +41,9 @@ class Solution {
         int i = (low - 1);
         for (int j = low; j < high; j++) {
             if (arr[j] < pivot) {
-                int temp = arr[i]
+                int temp = arr[i];
+                arr[i] = arr[j];
+                arr[j] = temp;
             }
         }
     }
