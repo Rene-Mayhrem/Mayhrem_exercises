@@ -1,27 +1,52 @@
-import java.util.Arrays;
+
+
+import org.w3c.dom.ls.LSException;
 
 public class App {
     public static void main(String[] args) throws Exception {
-        Solution solution = new Solution();
-        solution.addTwoNumbers(new LinkedList<>(Arrays.asList(1, 2, 3)), new LinkedList<>(Arrays.asList(4, 5, 6)));
+       
     }
 }
 
 
 class Solution {
-    public LinkedList addTwoNumbers (LinkedList l1, LinkedList l2) {
-        //? reverse my lists
-        return null;
+    public ListNode addTwoNumbers (ListNode l1, ListNode l2) {
+        ListNode temp = new ListNode(0);
+        ListNode ans = temp;
+        int carry = 0;
+
+        while (l1 != null || l2 != null || carry != 0) {
+            int firstNode = (l1 != null) ? l1.val : 0; 
+            int secondNode = (l2 != null) ? l2.val : 0;
+
+            int sum = carry + (firstNode + secondNode);
+
+            carry = sum / 10;
+            ans.next = new ListNode(sum%10);
+            ans = ans.next;
+
+            if (l1 != null) {
+                l1 = l1.next;
+            }
+            if (l2 != null) {
+                l2 = l2.next;
+            }
+        }
+        return temp.next;
     }
 }
 
-class LinkedList {
-    private Node head;
-    private Node tail;
-    private length;
+class ListNode {
+    int val;
+    ListNode next;
 
-    class Node {
-        int value;
+    ListNode() {}
 
+    ListNode(int val) {
+        this.val = val;
+    }
+
+    ListNode(int val, ListNode next) {
+          
     }
 }
