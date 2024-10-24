@@ -29,17 +29,4 @@ public class ListNode {
     }
   }
 
-  public ListNode deleteDuplicates (ListNode head) {
-    while(head.next != null) {
-      ListNode temp = head.next;
-      if (head.val == temp.val) {
-        head.next = temp.next;
-        temp = null;
-      } else {
-        head = head.next;
-      }
-    }
-    return head;
-  }
-
 }
