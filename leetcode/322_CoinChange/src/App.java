@@ -5,10 +5,10 @@ import java.util.Collections;
 
 public class App {
     public static void main(String[] args) throws Exception {
-        Solution solution = new Solution();
+        Solution2 solution = new Solution2();
         int[] coins = {186, 419, 83, 408};
         
-        System.out.println(solution.coinChange(coins, 6249));
+        System.out.println(solution.coinChange(coins, 10));
     }
 }
 
