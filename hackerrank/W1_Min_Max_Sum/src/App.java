@@ -2,25 +2,9 @@ import java.util.List;
 
 public class App {
     public static void main(String[] args) throws Exception {
-        System.out.println("Hello, World!");
-    }
+        Result res = new Result();
+        List<Integer> arr = List.of(256741038,623958417,467905213,714532089,938071625);
+        res.miniMaxSum(arr);
+     }
 }
 
-
-class Sorting {
-    private List list;
-
-    public List getList() {
-        return list;
-    }
-
-    public void setList(List list) {
-        this.list = list;
-    }
-
-    public Sorting (List list) {
-        this.list = list;
-    }
-
-    
-}
