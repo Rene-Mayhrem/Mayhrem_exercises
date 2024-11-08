@@ -34,5 +34,15 @@ public class Solution {
     return kids;
   }
 
-  
+  public List<Boolean> kidsWithCandiesSimplified (int[] candies, int extraCandies) {
+    int maxCandies = candies[0];
+    for (int candy : candies) {
+      maxCandies = Math.max(candy, maxCandies);
+    }
+    List<Boolean> result = new ArrayList<>();
+    for (int candy : candies) {
+      result.add((candy + extraCandies) >= maxCandies);
+    }
+    return result; 
+  }
 }
