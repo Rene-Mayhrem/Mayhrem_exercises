@@ -10,7 +10,7 @@ public class Solution {
      * SOLUTION
      * Sorting the array
      * Create two pointer-> left = nums[0] && right = nums[nums.length - 1]
-     * Initialize fairPairs = 0
+     * Initialize fairPairs = 0S
      * Iterate through the array while left != right
       * Check if nums[left] >= lower && nums[right] <= upper 
         * 
