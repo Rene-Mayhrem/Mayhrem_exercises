@@ -42,16 +42,19 @@ public class Solution {
   public boolean canPlaceFlowers (int[] flowerbed, int n) {
     int before = -1, current = 0, after = 1;
     while (current < flowerbed.length) {
-      System.out.println("-----------------");
-      try {
-        System.out.println(flowerbed[before]);
-        System.out.println(flowerbed[current]);
-        System.out.println(flowerbed[after]);
-      } catch (Exception e) {
-        // TODO: handle exception
-      }
+      if (n == 0) return true;
       if (flowerbed[current] == 0) {
-        if (before < 0 && flowerbed[after] == 0 || flowerbed[before] == 0 && flowerbed[after] == 0) {
+        if (before < 0) {
+          if (flowerbed[after] == 0) {
+            n--;
+            flowerbed[current] = 1;
+          }
+        } else if (after == flowerbed.length) {
+          if (flowerbed[before] == 0) {
+            n--;
+            flowerbed[current] = 1;
+          }
+        } else if (flowerbed[before] == 0 && flowerbed[after] == 0) {
           n--;
           flowerbed[current] = 1;
         }
@@ -60,7 +63,6 @@ public class Solution {
       current++;
       after++;
     }
-    System.out.println("Value of n: "+n);
     return n == 0;
   }
 }
