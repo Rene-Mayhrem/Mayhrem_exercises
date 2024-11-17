@@ -65,4 +65,22 @@ public class Solution {
     }
     return n == 0;
   }
+
+  public boolean placeFlowers (int[] flowerbed, int n) {
+    int[] copy = flowerbed.clone();
+    for (int i = 0; i < copy.length; i++) {
+      if (n == 0) return true;
+      if (copy[i] == 0) {
+        boolean isLeftEmpty = (i == 0) || (copy[i - 1] == 0);
+        boolean isRigthEmpty = (i == copy.length - 1) || (copy[i + 1] == 0);
+
+        if (isLeftEmpty && isRigthEmpty) {
+          n--;
+          copy[i] = 1;
+          i++;
+        }
+      }
+    }
+    return (n == 0);
+  }
 }
