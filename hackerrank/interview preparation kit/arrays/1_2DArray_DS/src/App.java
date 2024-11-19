@@ -10,7 +10,7 @@ public class App {
                 Arrays.asList(0, 0, 8, 6, 6, 0),
                 Arrays.asList(0, 0, 0, -2, 0, 0),
                 Arrays.asList(0, 0, 1, 2, 4, 0));
-        new Solution().hourglassSum(arr);
+        System.out.println(new Solution().hourglassSum(arr));
     }
     
 }

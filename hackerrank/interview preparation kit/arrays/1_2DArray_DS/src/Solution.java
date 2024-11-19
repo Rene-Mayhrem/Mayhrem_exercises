@@ -39,16 +39,26 @@ public class Solution {
     return subsets;
   }
 
+  private int getSumSubset (Hourglass subset, List<List<Integer>> arr) {
+    int sum = 0;
+    System.out.println("Subsets");
+    for (int i = 0; i <= 2; i++) {
+      for (int j = 0; j <= 2; j++) {
+        System.out.println(arr.get(i).get(j));
+        sum += (j == 1 && i != 1) ? 0 : arr.get(i + subset.xStart).get(j + subset.yStart);
+      }
+      System.out.println();
+    }
+    return sum;
+  }
+
   public int hourglassSum (List<List<Integer>> arr) {
     Stack<Hourglass> subsets = buildHourglassSubset(arr.size());
     int maxSum = 0;
     for (Hourglass subset : subsets) {
-      while (subset.xStart <= subset.xEnd) {
-        while (subset.yStart <= subset.yEnd) {
-          
-        }
-      }
+      subset.print();git 
+      Math.max(maxSum, getSumSubset(subset, arr));
     }
-    return 0;
+    return maxSum;
   }
 }
