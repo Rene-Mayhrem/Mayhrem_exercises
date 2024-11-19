@@ -2,63 +2,64 @@ import java.util.List;
 import java.util.Stack;
 
 public class Solution {
+
+  class Subset {
+    int i;
+    int j;
+
+    Subset(int i, int j) {
+      this.i = i;
+      this.j = j;
+    }
+
+    public void print() {
+      System.out.println("i = " + i + " --- j = " + j);
+    }
+  }
+
   /*
-   * PROBLEM -> Get the highest hourglass sum
-   * INPUT -> 6x6 2D array
-   * OUTPUT -> input -with the highest sum of hourgalss
-   * SOLUTION 
-   * Create a stack with the limits of the hourglass 
-   * Create a maxSum variable
-   * Start iterating the 2D array with the stack values
+   * Create a variable to store the max sum -> 0
+   * Create the subsets according to the hourglass algorithm -> 16
+   * Retrieve the sum of every subset
    * 
    */
-  class Hourglass {
-    int xStart;
-    int xEnd;
-    int yStart;
-    int yEnd;
-    
-    public Hourglass (int xStart, int xEnd, int yStart, int yEnd) {
-      this.xEnd = xEnd;
-      this.xStart = xStart;
-      this.yStart = yStart;
-      this.yEnd = yEnd;
+  public int hourglassSum(List<List<Integer>> arr) {
+    int max = 0;
+    Stack<Subset> subsets = getSubsets(arr.size());
+    for (Subset subset : subsets) {
+      // subset.print();
+      max = Math.max(max, getSumSubset(subset, arr));
     }
-
-    public void print () {
-      System.out.println("x1->"+xStart+" x2->"+xEnd+" y1>"+yStart+" y2->"+yEnd);
-    }
-  }
-  private Stack<Hourglass> buildHourglassSubset (int n) {
-    Stack<Hourglass> subsets = new Stack<>();
-    for (int i = 0 ; (i + 2) < n; i++) {
-      for (int j = 0; (j + 2) < n; j++) {
-        subsets.add(new Hourglass(i, i + 2, j, j +2 ));
-      }
-    }
-    return subsets;
+    return max;
   }
 
-  private int getSumSubset (Hourglass subset, List<List<Integer>> arr) {
+  public int getSumSubset(Subset subset, List<List<Integer>> arr) {
     int sum = 0;
-    System.out.println("Subsets");
-    for (int i = 0; i <= 2; i++) {
-      for (int j = 0; j <= 2; j++) {
-        System.out.println(arr.get(i).get(j));
-        sum += (j == 1 && i != 1) ? 0 : arr.get(i + subset.xStart).get(j + subset.yStart);
+    System.out.println();
+    for (int i = 0; i < 3; i++) {
+      for (int j = 0; j < 3; j++) {
+        if (i == 1 && (j == 0 || j == 2)) {
+          System.out.print(" ");
+          continue;
+        } else {
+          // System.out.print(arr.get(subset.i + i).get(subset.j + j) + " ");
+          sum += arr.get(subset.i + i).get(j + subset.j);
+        }
+
       }
-      System.out.println();
+      // System.out.println();
     }
+    // System.out.println("TOTAL -> " + sum);
     return sum;
   }
 
-  public int hourglassSum (List<List<Integer>> arr) {
-    Stack<Hourglass> subsets = buildHourglassSubset(arr.size());
-    int maxSum = 0;
-    for (Hourglass subset : subsets) {
-      subset.print();git 
-      Math.max(maxSum, getSumSubset(subset, arr));
+  private Stack<Subset> getSubsets(int n) {
+    Stack<Subset> subsets = new Stack<>();
+    for (int i = 0; (i + 2) < n; i++) {
+      for (int j = 0; (j + 2) < n; j++) {
+        subsets.add(new Subset(i, j));
+      }
     }
-    return maxSum;
+    return subsets;
   }
 }
