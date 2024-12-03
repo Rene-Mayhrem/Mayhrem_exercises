@@ -10,4 +10,17 @@ public class Solution {
     System.out.println(strBuilder.toString());
     return strBuilder.toString();
   }
+
+  public String addSpacesInString (String str, int[] spaces) {
+    StringBuilder result = new StringBuilder();
+    int offset = 0;
+    for (int index = 0; index < str.length(); index++) {
+      if (offset < spaces.length && index == spaces[offset]) {
+        result.append(' ');
+        offset++;
+      } 
+      result.append(str.charAt(index));
+    }
+    return result.toString();
+  }
 }
