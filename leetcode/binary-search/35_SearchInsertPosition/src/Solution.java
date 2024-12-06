@@ -7,12 +7,10 @@ public class Solution {
         low = mid + 1;
       } else if (nums[mid] > target) {
         high = mid - 1;
+      } else if (nums[mid] == target) {
+        return mid;
       } else {
-        if (nums[mid] == target) {
-          return mid;
-        } else {
-          return mid + 1;
-        }
+        return mid + 1;
       }
     }
     return -1;
