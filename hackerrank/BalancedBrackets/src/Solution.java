@@ -8,32 +8,50 @@ public class Solution {
   //? SOLUTION
   // ? Check if s.length % 2 != 0 -> return false -> there's no matched brackets
   // ? Split my string into an array of chars
-  // ? Create a hashMap of -> brackets
+  // ? Create a hashbrackets of -> brackets
   // ? Create two pointer -> low and high (first and last elements)
   // ? Iterate the array while low < high
     // ? Check hash.get(key) != s[high] -> false
   //? return true -> matched pairs 
 
-  private HashMap<Character, Character> map = new HashMap<>();
+  private static HashMap<Character, Character> brackets = new HashMap<>();
 
   public Solution () {
-    map.put('{', '}');
-    map.put('[', ']');
-    map.put('(', ')');
+    brackets.put('{', '}');
+    brackets.put('[', ']');
+    brackets.put('(', ')');
   }
 
   
-  public String isBalanced (String input) {
+  public static String isBalanced (String input) {
     if (input.length() % 2 != 0) return "NO";
     Stack<Character> sequence = new Stack<>();
     for (char current : input.toCharArray()) {
-      if (map.containsKey(current)) {
+      if (brackets.containsKey(current)) {
         sequence.push(current);
-      } else if (map.containsValue(current)) {
-        if (sequence.isEmpty() || map.get(sequence.pop()) != current) {
+      } else if (brackets.containsValue(current)) {
+        System.out.println(sequence);
+        if (sequence.isEmpty() || brackets.get(sequence.pop()) != current) {
           return "NO";
         }
       }
     }
+    return sequence.isEmpty() ? "YES" : "NO";
   }
+
+  public String isBalancedBrackets(String s) {
+    if (s.length() % 2 != 0) return "NO";
+    Stack<Character> sequence = new Stack<>();
+    for (char current : s.toCharArray()) {
+        if (brackets.containsKey(current)) {
+            sequence.push(current);
+        } else if (brackets.containsValue(current)) {
+            if (sequence.isEmpty() || brackets.get(sequence.pop()) != current) {
+                return "NO";
+            }
+        }
+    }
+    return sequence.isEmpty() ? "YES" : "NO";
+    
+}
 }

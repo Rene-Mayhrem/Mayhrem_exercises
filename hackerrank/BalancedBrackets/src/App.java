@@ -6,6 +6,10 @@ public class App {
         System.out.println(new Solution().isBalanced("{}}}((}}}}]]]))}"));
         System.out.println("---------------");
         System.out.println(new Solution().isBalanced("{{[[(())]]}}"));
+        System.out.println("---------------");
+        System.out.println(new Solution().isBalanced("}}}}}}}}}}]]]]"));
+        System.out.println("---------------");
+        System.out.println(new Solution().isBalanced("{{)[](}}"));
         
     }
 }
