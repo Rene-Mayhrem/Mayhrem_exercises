@@ -27,4 +27,27 @@ public class Solution {
     }
     return depth;
   }
+
+
+  //? INPUT -> Describe my tree class -> 
+  //? OUTPUT -> levels of my tree
+  //? SOLUTION 
+  //? Use first breadth search -> traverse by levels
+  //? Check if root is null -> 0
+  //? Create a variable to store the maxDepth
+  //? Use a queue to store nodes by level 
+  //? Iterate through the queue while is not empty
+  //? Reassign maxDepth variable by increasing level by level
+  public int maxDepth (BinaryTree tree) {
+    if (tree.root == null) return 0;
+    int max = 0;
+    Queue<Node> treeNodes = new LinkedList<>();
+    treeNodes.add(tree.root);
+    while(!treeNodes.isEmpty()) {
+      Node current = treeNodes.poll();
+      if (current.left != null) treeNodes.add(current.left);
+      if (current.right != null) treeNodes.add(current.right);
+    }
+    return max;
+  }
 }
