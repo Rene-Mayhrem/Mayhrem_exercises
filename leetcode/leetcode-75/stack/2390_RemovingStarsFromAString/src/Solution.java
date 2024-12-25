@@ -5,11 +5,8 @@ public class Solution {
     Stack<Character> stack = new Stack<>();
     StringBuilder sb = new StringBuilder();
     for (Character character : s.toCharArray()) {
-      if (character == '*') {
-        stack.pop();
-      } else {
-        stack.add(character);
-      }
+      if (character == '*') stack.pop();
+      else stack.add(character);
     }
 
     for (Character character : stack) sb.append(character);
