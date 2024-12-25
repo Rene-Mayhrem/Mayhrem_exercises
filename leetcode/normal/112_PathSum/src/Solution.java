@@ -8,7 +8,6 @@ import java.util.Stack;
 * Sample currencies file entries: 
 * 
 ---- I am asuming
-hashMap<String, List<Pair>>
 * {"from":"USD", "to":"EUR", "rate":1.1}
 * {"from":"GBP", "to":"COP", "rate":23.5} 
 * {"from":"EUR", "to":"GBP", "rate":1.2} 
