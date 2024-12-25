@@ -3,11 +3,16 @@ import java.util.Stack;
 public class Solution {
   public String removeStars (String s) {
     Stack<Character> stack = new Stack<>();
-    for (Character character : s.toCharArray()) stack.add(character);
-    for (Character character : stack) {
-      System.out.println(character);
+    StringBuilder sb = new StringBuilder();
+    for (Character character : s.toCharArray()) {
+      if (character == '*') {
+        stack.pop();
+      } else {
+        stack.add(character);
+      }
     }
-    System.out.println(stack);
-    return stack.toString();
+
+    for (Character character : stack) sb.append(character);
+    return sb.toString();
   }
 }
