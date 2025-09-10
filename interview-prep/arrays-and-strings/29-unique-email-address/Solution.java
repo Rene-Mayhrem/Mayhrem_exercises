@@ -31,3 +31,7 @@ public class Solution {
         return uniqueEmails.size();
     }
 }
+
+// Check if an array has duplicate values with O(1) space complexity and O(n)
+// The alphabet does contains 26 letters
+// -> Iterate the alphabet and check if there's any dupllicate value
