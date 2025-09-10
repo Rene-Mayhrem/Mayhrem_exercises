@@ -8,7 +8,7 @@ public class Solution {
         while (right < characters.length && characters[right] != '\0') right++;
         right--;
         //? Traverse the array
-        while (left < right || characters[left] == '\0') { 
+        while (left < right) { 
             char temp = characters[left];
             characters[left] = characters[right];
             characters[right] = temp;
