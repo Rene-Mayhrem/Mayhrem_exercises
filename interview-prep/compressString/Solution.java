@@ -13,8 +13,7 @@ public class Solution {
                 consecutiveChars++;
                 fast++;
             }
-            compressedString.append(word.charAt(slow));
-            compressedString.append(consecutiveChars);
+            compressedString.append(word.charAt(slow)).append(consecutiveChars);
             slow = fast;
         }
         return compressedString.toString().length() < word.length() ? compressedString.toString() : word;
