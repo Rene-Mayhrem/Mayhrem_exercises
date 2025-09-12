@@ -20,3 +20,17 @@ Example 2:
 Input: prices = [7,6,4,3,1]
 Output: 0
 Explanation: In this case, no transactions are done and the max profit = 0.
+
+# Approach
+
+Using two pointers, maybe by using two pointer one faster than the other, we could go from slow to fast and compare the MaxDistance between pointer, we only need to go from left to right. I'd create a variable call current profit to determine the difference between profits. Creating a variable for maxProfit to compare the current profit with the maxProfit value, return that value.
+
+I am thinking about having two pointers:
+
+- Traverse the array 
+- Keep tracking of minPrice (toBuy)
+- Kepp tracking of maxProfit (toSell)
+
+
+
+
