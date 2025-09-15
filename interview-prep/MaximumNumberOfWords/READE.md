@@ -51,3 +51,20 @@ trade-off: space complexity. 26-fixed array is better than Set and the hashing p
 
 # RETURN
 - Return the value of wordCounter
+
+Hello [Person's Name],
+
+My name is [Your Name], I'm a DevOps Engineer in Mexico. I'm genuinely fascinated by Japanese culture and professional environments, and I'd be great to connect and perhaps gain some insights.
+
+Cheers,
+[Your Name]"
+
+Option 3: Very Concise & Open
+
+
+Hi  Aahan Rawat,
+
+René Cruz here, a DevOps Engineer from Mexico. I have a huge interest in Japan – its culture and industry – and would love to expand my network with people working there.
+
+Hope to connect!
+René c:
