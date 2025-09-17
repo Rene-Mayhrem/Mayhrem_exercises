@@ -8,13 +8,28 @@ public class Solution {
             if (current.value == target) {
                 return current;
             } else if (current.value < target) {
-                current = current.left;
+                getNodeBST(current.left, target);
             } else {
-                current = current.right;
+                getNodeBST(current.right, target);
             }
         }
     } 
-}
+
+    public Node getNodeRBST (Node root, int target) {
+        Node current = root;
+        if (current == null) return null;
+        if (current.value == target) {
+            return current;
+        } else if (current.value < target) {
+            current = getNodeRBST(current.left, target);
+        } else {
+            current = getNodeRBST(current.right, target);
+        }
+        return null;
+    }
+    
+} 
+
 
 class Node {
     int value;
