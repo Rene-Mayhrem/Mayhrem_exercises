@@ -29,6 +29,4 @@ Return the number of good starting indices.
 * From index `2` (value `12`): An odd jump can be made to index `3` (`14 >= 12`). From `3`, an odd jump to `4`. It's a **good** start.
 
 What's your initial approach to solving this problem?+
-|
-¿
-¿¿
+
