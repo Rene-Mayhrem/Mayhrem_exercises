@@ -30,3 +30,7 @@ It might be good to first replace the '-' characters with empty spaces and cast 
 - Normalize the string 's' in order to remove the "-" characters and to convert to upper case
 - Start building the string moving from the end of the string to the beggining moving k elements and setting up a '-' character on it
 - As we iterate, the first group will simply be whatever is left when you reach the beggingin of the string
+
+# COMPLEXITY
+- Time complexity: O(n) since we iterate the string
+- Space complexity: O(1) since we use a string builder for performance
