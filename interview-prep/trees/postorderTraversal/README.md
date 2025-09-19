@@ -19,3 +19,7 @@ Given the `root` of a binary tree, return the **postorder** traversal of its nod
 * **Output:** `[]`
 
 What are your initial thoughts on how to solve this problem? Consider how your approach might be similar to, or different from, the inorder and preorder traversals we've already done.
+
+# Approach
+
+Creating an empty list and a stack are necessary for postorder traversal. After the initialization of this elements, is necessary to iterate the tree while the stack is not empty by adding the root as the first element, since this element is the one that comes to the last. Then, we need to move to the left as far as possible and add the elements to the list and then move to the right. Since postorder traversal is: left -> right -> root
