@@ -18,7 +18,7 @@ public class Solution {
             }
             TreeNode poppedNode = helperStack.pop();
             inorderList.add(poppedNode.value);
-            if (poppedNode.right != null) current = poppedNode.right;
+            current = poppedNode.right;
         }
         return inorderList;
     }
