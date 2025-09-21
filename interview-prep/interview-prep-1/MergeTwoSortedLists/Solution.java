@@ -14,7 +14,7 @@ public class Solution {
             }
             current = current.next;
         }
-        dummy.next = l1 == null ? l2 : l|1;
+        current.next = l1 == null ? l2 : l1;
         return dummy.next;
     }
 }
