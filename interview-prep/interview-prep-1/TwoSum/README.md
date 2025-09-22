@@ -23,4 +23,6 @@ You may assume that each input would have **exactly one solution**, and you may 
 
 What are your initial thoughts on how to approach this problem?
 
-#
+# APPROACH
+
+I'm thinking about two-pass and creating a map of the elements, where we have the key as the number, and the value as the index - first pass. The creation of the map is necessary to retrieve faster the target by performing the operation `total = target - nums[i]`, then if we retrieve successfully a value, we return both indices. As the conditions say, there's exactly one solution. This will perform a solution with O(n) of time and space complexity.
