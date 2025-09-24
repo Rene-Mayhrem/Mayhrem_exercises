@@ -128,3 +128,36 @@ As a junior developer, you were juggling multiple time-sensitive tasks from diff
 **ACTION:** I immediately stopped my current work on both projects. I took a moment to assess the bug's impact and urgency, and I communicated with my manager and team lead that I was shifting my focus entirely to the new bug. I broke down the bug fix into a set of small, actionable steps. Once the bug was resolved and a hotfix was deployed, I updated my project manager on the new timeline for my original two tasks. I then re-prioritized the mobile app feature as my primary focus and put the analytics dashboard on the back burner.
 
 **RESULT:** I successfully fixed the critical bug within a few hours, minimizing the client impact. By communicating with my manager and stakeholders early and transparently, I was able to manage their expectations for the original projects. I completed the mobile app feature on time and then went back to finish the analytics dashboard, completing all my tasks without missing a deadline.
+
+
+---
+
+Questions about the Team and Role
+
+These questions show that you're thinking about your potential fit and how you would contribute.
+
+    "What's the biggest challenge the team is facing right now, and how could a new hire help with that?" This question shows that you're ready to tackle difficult problems.
+
+    "Could you describe the day-to-day responsibilities of this role? What would a typical week look like for someone in this position?" This is a great way to get a clear picture of what the job entails beyond the description.
+
+    "What does success look like for this role in the first 3 to 6 months?" This shows that you're goal-oriented and focused on making an impact early on.
+
+Questions about the Work and Technology
+
+These questions demonstrate your technical curiosity and your interest in the specific work the team does.
+
+    "What is the team's approach to technical debt? How do you balance shipping new features with maintaining existing systems?" This shows that you care about code quality and long-term sustainability.
+
+    "How does this team decide on its technical roadmap? Is it primarily top-down or more of a collaborative process?" This helps you understand the team's culture and autonomy.
+
+    "Are there any projects or technologies that the team is particularly excited about in the coming year?" This is a great way to learn about what's next for the team and the company.
+
+Questions about Career Growth and Culture
+
+These questions show that you're serious about your career development and want to find a place where you can learn and grow.
+
+    "What opportunities are there for mentorship and professional growth within the team or the wider organization?" This shows that you're proactive about your own development.
+
+    "What's one thing you love about working at Google, and one thing you find challenging?" This gives you an honest look at the company culture from an employee's perspective.
+
+    "What's the most significant project you've worked on at Google, and why was it so impactful for you?" Asking about the interviewer's own experience can build rapport and provide valuable insights.
