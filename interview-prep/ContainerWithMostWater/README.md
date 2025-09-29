@@ -28,3 +28,6 @@ If you pick the line at index 1 (height 8) and the line at index 6 (height 8):
 ### Initial Thoughts: Brute Force
 
 What would be the simplest, brute-force approach to solve this, and what would the time complexity be? 🧠
+
+## INITIAL APPROACH
+The brute-force in this exercise, is by using nested loops, which represent the iteration of the of all the available and possible combination of containers, except for itself, but this approach is quite time consuming O(n*n). The better approach is using two pointers left and right and move them. We need to create a variable called maxArea which will represent the value of the container that can hold the most water. Inside the loops it's important to define the height and the base of the container where base is distance between points and height is the min value between heights[left] and heights[right]
