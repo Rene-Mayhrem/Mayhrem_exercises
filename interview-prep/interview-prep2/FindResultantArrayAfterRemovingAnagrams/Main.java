@@ -1,0 +1,5 @@
+package FindResultantArrayAfterRemovingAnagrams;
+
+class Main {
+
+}
